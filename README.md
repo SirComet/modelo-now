@@ -3,6 +3,8 @@
 ## How to bootstrap the project
 
 ```
+$ git clone git@github.com:mishelashala/modelo-now.git
+$ cd modelo-now
 $ npm install
 $ NODE_ENV=production node app
 ```
@@ -14,7 +16,7 @@ express
 react
 mongodb
 ...others
-(check package.json)
+(check package.json for more info)
 ```
 
 ## API

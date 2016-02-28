@@ -1,0 +1,288 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.background{
+ height: 629px;
+    background: url('background.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -moz-background: url('background.jpg');
+    -moz-background-repeat: no-repeat;
+    -moz-background-position: center center;
+    -moz-background-attachment: fixed;
+    -webkit-background: url('background.jpg');
+    -webkit-background-repeat: no-repeat;
+    -webkit-background-position: center center;
+    -webkit-background-attachment: fixed;
+    
+     -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.navbar-default .navbar-nav>li>a{
+    color: dodgerblue;
+}
+
+.margin-top{
+    margin-top:90px;
+}
+
+
+    
+/*El css de bryan */
+    *{
+         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+	 div{
+	  display: block;
+	  }
+  	.content-shop-title{
+  		text-align: center;
+	  margin: 20px 0px;
+	  overflow: hidden; 
+  	}
+  	.item-container{
+  		border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    text-align: center;
+  	}
+  	.item-container .over-btn{
+      bottom: 50px;
+      height: 0;
+      position: relative;
+      text-align: center;
+      width: 100%;
+  	}
+  .add-btn a{
+    display: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    background-color: #5088e3;
+    padding: 10px 10px;
+    border-radius: 4px;
+  }
+  .item-container:hover .add-btn a {
+    display: inline-block;
+    text-decoration: none;
+  }
+  	.item-container .details-divider-top {
+      padding: 20px 0px 0px 0px; 
+  	}
+    .item-container .details-divider-bottom {
+      padding: 0px 20px 20px 20px;
+  	}
+    .item-container .details-productshot {
+      padding: 0px 0px 20px 0px;
+  	}
+       .item-container .details-productshot img {
+        height: 132px;
+        width: auto; }
+    .item-container .details-productpackage .p-label {
+      padding: 3px 6px;
+      border: solid 1px #8a919e;
+      border-radius: 2px;
+      color: #8a919e;
+      text-transform: uppercase; 
+  	}
+  	.item-container .details-productpackage .unit {
+      font-size: 12px;
+      font-weight: 600;
+  	}
+    .item-container .details-productpackage .promo {
+      font-size: 12px;
+      font-weight: 600;
+      margin: 0px 0px 0px 10px;
+  	}
+    .item-container .details-productinfo h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 5px; 
+  	}
+    .item-container .details-productinfo p {
+      font-size: 14px;
+      margin: 0px;
+      color: #8a919e;
+  	}
+    .padding-top{
+      padding-top: 1em;
+    }
+    .footer-margin{
+    	    margin-top: 2em;
+    }
+    .footer-black{
+    	background-color: black;	
+    }
+
+    .menu{
+  		list-style: none;
+  	}
+  	.footer-content{
+  		text-align: center;
+  	}
+  	.menu .title{
+  		font-size: 22px;
+  		color:white;
+		font-weight: bold;
+		padding:.5em 0;
+  	}
+  	.menu li{
+  		font-size: 16px;
+  	}
+  	.menu li>a{
+  		font-style: none;
+  		color: #A5A0A0;
+  	}
+  	.menu li>a:hover{
+  		font-style: none;
+  		color: #A5A0A0;
+  	}
+  	.legal{
+  		text-align: center;
+  	}
+  	.legal a{
+  		color:#fff;
+  	}
+/*Termina el css de bryan */
+
+/*Titulo responsive*/
+
+@media screen and (max-width:1920px) {
+    .typedtitle {
+        font-size: 2em;
+            margin-top: 30%;
+    color: white;
+    text-align: center;
+    }
+    .image{
+      display: inherit;  
+    }    
+    .background{
+        height:auto; 
+    }
+}
+@media screen and (max-width:1080px) {
+    .typedtitle {
+        font-size: 1.5em;
+            margin-top: 30%;
+    color: white;
+    text-align: center;
+
+    }
+}
+
+@media screen and (max-width:800px) {
+    .typedtitle {
+        font-size: 1.45em;
+    }
+    @media screen and (max-width:700px) {
+        .typedtitle {
+            font-size: 1em;
+             margin-top: 20%;
+        }
+        .image{
+      display: none;  
+    }  
+    }
+    @media screen and (max-width:400px) {
+        .typedtitle {
+            font-size: 1.1em;
+            margin-top: 10%;
+        }
+        .image{
+      display: none;  
+    }  
+    }
+
+    @media screen and (max-width:200px) {
+        .typedtitle {
+            font-size: .5em;
+        }
+        .image{
+      display: none;  
+    }  
+    }
+
+
+/* //Fausto modificación */
+
+.typedtitle{    
+}
+
+/*Cursor que parpadea mamalon*/
+
+.typed-cursor {
+            opacity: 1;
+            font-weight: 100;
+            -webkit-animation: blink 0.7s infinite;
+            -moz-animation: blink 0.7s infinite;
+            -ms-animation: blink 0.7s infinite;
+            -o-animation: blink 0.7s infinite;
+            animation: blink 0.7s infinite;
+        }
+        
+        @-keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        @-webkit-keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        @-moz-keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        @-ms-keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        @-o-keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+/*termina el cursor que parpadea mamalon*/

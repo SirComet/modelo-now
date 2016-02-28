@@ -55,7 +55,7 @@
     }
 }
 
-.rojo{
+/*.rojo{
     background: blue;
     border-radius:10px;
     padding:20px;
@@ -78,9 +78,15 @@
     padding:20px;
     color:white;
     text-shadow: 1px 1px 1px black;
-}
+}*/
 
 .row{
     margin-left:0px;
     margin-right: 0px;
+}
+.chelapoints{
+  font-size: 12px;
+}
+.premios-border{
+  border-bottom: 1px solid black;
 }

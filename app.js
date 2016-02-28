@@ -7,20 +7,20 @@
 const Path = require('path');
 const Express = require('express');
 const Logger = require('morgan');
+const BodyParser = require('body-parser');
 
 /*!
  * Routes
  */
 
 const Api = require('./routes/api');
-//const Admin = require('./routes/admin');
+const Admin = require('./routes/admin');
 
 /*!
  * Local vars
  */
 
 const publicPath = Path.join(__dirname, 'app/public');
-//const AdminModel = require('./database/').admin;
 
 const app = Express();
 
@@ -30,8 +30,8 @@ const app = Express();
 
 app.set('etag', 'strong');
 app.use(Logger('tiny'));
-//app.use(BodyParser.json());
-//app.use(BodyParser.urlencoded({ extended: false }));
+app.use(BodyParser.json());
+app.use(BodyParser.urlencoded({ extended: false }));
 
 app.use(Express.static(publicPath));
 
@@ -43,8 +43,15 @@ app.get('/', (req, res) => {
   res.sendFile(publicPath + '/index.html');
 });
 
+app.get('/admin', (req, res) => {
+  res.redirect('/admin/dashboard');
+});
+
+app.get('/admin/dashboard', (req, res) => {
+  res.sendFile(publicPath + '/dashboard.html');
+});
+
 app.use('/api/', Api);
-//app.use('/admin/', Admin);
 
 /*!
  * Starting server

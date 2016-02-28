@@ -12,4 +12,4 @@ log
 *~
 
 # bundle.js
-app/public/js/bundle.js
+app/public/js/main-bundle.js

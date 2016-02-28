@@ -11,5 +11,9 @@ log
 # auto save files
 *~
 
-# bundle.js
+# bundles
 app/public/js/main-bundle.js
+app/public/js/dashbord-bundle.js
+
+# some db
+baseDatos

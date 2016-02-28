@@ -26,25 +26,17 @@ const Product = React.createClass({
   },
   render: function () {
     return (
-      <tr>
-        <td>
-          <div className="col-md-4">
-            <div className="checkbox">
-              <label>
-                <input onClick={this.handleCheck} type="checkbox" checked={this.state.checked} />
-              </label>
-            </div>
-          </div>
-          <div className="col-md-4">
-            <h4>{this.props.name}</h4>
-          </div>
-          <div className="col-md-4">
-            <p>{this.state.descount}</p>
-            <button onClick={this.increment}>+</button>
-            <button onClick={this.decrement}>-</button>
-          </div>
-        </td>
-      </tr>
+      <div className="beer">
+        <div>
+          <input className="beer-status"  onClick={this.handleCheck} type="checkbox" checked={this.state.checked} />
+          <h4 className="beer-name">{this.props.name}</h4>
+        </div>
+        <div className="descount">
+          <button className="descount-button" onClick={this.decrement}>-</button>
+          <p className="descount-percentage">{this.state.descount}</p>
+          <button className="descount-button" onClick={this.increment}>+</button>
+        </div>
+      </div>
     );
   }
 });

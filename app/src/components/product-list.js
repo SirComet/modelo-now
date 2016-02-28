@@ -7,6 +7,11 @@ const Fetch = require('node-fetch');
 const Product = require('./product');
 
 const ProductList = React.createClass({
+  handleClick: function () {
+    let node = ReactDOM.findDOMNode(this);
+
+    console.log(node.innerHTML);
+  },
   componentWillMount: function () {
     Fetch('http://localhost:3000/api/beers')
       .then(response => response.json())
@@ -22,11 +27,16 @@ const ProductList = React.createClass({
   },
   render: function () {
     return (
-      <table className="table table-striped table-bordered table-hover">
-        {this.state.products.map(prod => {
-          return <Product name={prod.name} />
-        })}
-      </table>
+      <div>
+        <div>
+          {this.state.products.map(prod => {
+            return <Product name={prod.name} key={prod._id} />
+          })}
+        </div>
+        <div>
+          <button className="promo-confirm" onClick={this.handleClick}>Crear</button>
+        </div>
+      </div>
     );
   }
 });

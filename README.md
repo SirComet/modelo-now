@@ -11,5 +11,5 @@ $ node app
 ```
 GET /api/beers/
 GET /api/promos/
-GET /api/packs
+GET /api/packs/
 ```

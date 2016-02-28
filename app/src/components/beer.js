@@ -18,7 +18,7 @@ const Beer = React.createClass({
           <div className="details">
             <div className="details-divider-top">
               <div className="details-productshot">
-                <img src="img/product-shot_2x.jpg" />
+                <img src={this.props.src} />
               </div>
               <div className="over-btn">
                 <div className="add-btn">

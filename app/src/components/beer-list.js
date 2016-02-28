@@ -38,6 +38,7 @@ const BeerList = React.createClass({
                 description={state.description}
                 name={state.name}
                 price={state.price}
+                src={'img/' + state.img}
               />
             );
           })

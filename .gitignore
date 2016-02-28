@@ -1,4 +1,15 @@
 # modules and dependencies
 node_modules
 
+# Static files
 Modelonow_files
+
+# logs
+log
+*.log
+
+# auto save files
+*~
+
+# bundle.js
+app/public/js/bundle.js

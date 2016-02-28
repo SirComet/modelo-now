@@ -8,6 +8,7 @@ const Path = require('path');
 const Express = require('express');
 const Logger = require('morgan');
 const BodyParser = require('body-parser');
+const Compression = require('compression');
 
 /*!
  * Routes
@@ -30,6 +31,7 @@ const app = Express();
 
 app.set('etag', 'strong');
 app.use(Logger('tiny'));
+app.use(Compression());
 app.use(BodyParser.json());
 app.use(BodyParser.urlencoded({ extended: false }));
 
@@ -57,6 +59,10 @@ app.get('/caja', (req, res) => {
 
 app.get('/design-package', (req, res) => {
   res.sendFile(publicPath + '/design-package.html');
+});
+
+app.get('/profile', (req, res) => {
+  res.sendFile(publicPath + '/profile.html');
 });
 
 app.use('/api/', Api);

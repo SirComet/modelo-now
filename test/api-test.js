@@ -7,22 +7,44 @@ const Request = require('supertest');
 const app = require('../app');
 
 describe('API test', () => {
-  let beers = [
-    { name: 'Cerveza generica', id: 'asdf' },
-    { name: 'Cerveza no generica', id: 'asdg' },
-    { name: 'Cerveza super generica', id: 'asde' }
-  ];
-
   it('Should get all beers from DB', (done) => {
     Request(app).
-      get('/api/beers').
+      get('/api/beers/').
       expect('Content-Type', /json/).
       expect(200).
       expect((res) => {
-        let data = JSON.parse(res.body);
+        let data = res.body;
 
         Expect(data).to.be.an('array', 'Data is an array');
-        Assert.lengthOf(data, 3, 'Length of data is 3');
+        Assert.lengthOf(data, 14, 'Length of data is 14');
+      }).
+      end(done);
+  });
+
+  it('Should get all promos from DB', (done) => {
+    Request(app).
+      get('/api/promos/').
+      expect('Content-Type', /json/).
+      expect(200).
+      expect((res) => {
+        let data = res.body;
+
+        Expect(data).to.be.an('array', 'Data is an array');
+        Assert.lengthOf(data, 1, 'Length of data is 1');
+      }).
+      end(done);
+  });
+
+  it('Should get all packs from DB', (done) => {
+    Request(app).
+      get('/api/packs/').
+      expect('Content-Type', /json/).
+      expect(200).
+      expect((res) => {
+        let data = res.body;
+
+        Expect(data).to.be.an('array', 'Data is an array');
+        Assert.lengthOf(data, 1, 'Length of data is 1');
       }).
       end(done);
   });

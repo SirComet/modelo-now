@@ -3,9 +3,10 @@
 const Mongoose = require('mongoose');
 const Schema = Mongoose.Schema;
 
-const AdminSchema = new Schema({
+const PackSchema = new Schema({
   name: String,
-  password: String
+  beers: Array,
+  price: Number
 });
 
-module.exports = AdminSchema;
+module.exports = PackSchema;

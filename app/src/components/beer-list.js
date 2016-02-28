@@ -2,18 +2,38 @@
 
 const React = require('react');
 const Beer = require('./beer');
+const Fetch = require('node-fetch');
 
 const BeerList = React.createClass({
-  addToCart: function (evt) {
-    console.log(evt);
+  componentWillMount: function () {
+    Fetch('http://localhost:3000/api/beers/')
+      .then(res => {
+        return res.json();
+      })
+      .then(data => {
+        console.log(data);
+        let beers = data;
+        this.setState({
+          beers
+        });
+      })
+      .catch(err => {
+        this.setState({
+          beers: []
+        })
+      });
+  },
+  getInitialState: function () {
+    return { beers: [] };
   },
   render: function () {
     return (
       <div>
         {
-          this.props.beers.map((state) => {
+          this.state.beers.map((state) => {
             return (
               <Beer
+                key={state._id}
                 amount={state.amount}
                 description={state.description}
                 name={state.name}

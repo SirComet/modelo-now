@@ -2,8 +2,14 @@
     padding: 0;
     margin: 0;
 }
+
+<!--Solución para eliminar el eje X-->
+.row{
+    margin-left: 0px;
+    margin-right: 0px;
+}
 .background{
- height: 629px;
+ 
     background: url('background.jpg');
     background-repeat: no-repeat;
     background-position: center center;
@@ -192,20 +198,27 @@
     @media screen and (max-width:400px) {
         .typedtitle {
             font-size: 1.1em;
-            margin-top: 10%;
+            margin-top: 5%;
         }
         .image{
       display: none;  
-    }  
+    }
+                .background{
+        height:300px; 
+    }
     }
 
     @media screen and (max-width:200px) {
         .typedtitle {
             font-size: .5em;
+            margin-top: 5%;
         }
         .image{
       display: none;  
-    }  
+    }
+        .background{
+        height:200px; 
+    }
     }
 
 

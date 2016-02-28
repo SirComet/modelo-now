@@ -1,0 +1,17 @@
+# top-most editor config file
+root = true
+
+# General styles
+[*]
+end_of_line = lf
+insert_final_newline = true
+
+# JavaScript styles
+[**.js]
+indent_style = space
+indent_size = 2
+
+# Package.json styles
+[package.json]
+indent_style = space
+indent_size = 2

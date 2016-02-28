@@ -10,9 +10,9 @@ Fetch('http://localhost:3000/api/beers/').
     return res.json();
   }).
   then(data => {
-    let beers = JSON.parse(data);
     ReactDOM.render(
-      <BeerList beers={beers} />,
+      <BeerList beers={data} />,
       document.querySelector('#beer-list')
     );
+    -->
   })

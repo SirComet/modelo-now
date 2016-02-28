@@ -10,8 +10,3 @@ ReactDOM.render(
   <ProductList />,
   document.querySelector('#product-list')
 );
-
-ReactDOM.render(
-  <PromoList />,
-  document.querySelector('#promo-list')
-);

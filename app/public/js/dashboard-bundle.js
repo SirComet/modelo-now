@@ -11,7 +11,9 @@ var ProductList = React.createClass({
   displayName: 'ProductList',
 
   handleClick: function handleClick() {
-    console.log(ReactDOM.findDOMNode(this));
+    var node = ReactDOM.findDOMNode(this);
+
+    console.log(node.innerHTML);
   },
   componentWillMount: function componentWillMount() {
     var _this = this;
@@ -34,8 +36,8 @@ var ProductList = React.createClass({
       'div',
       null,
       React.createElement(
-        'table',
-        { className: 'table table-striped table-bordered table-hover' },
+        'div',
+        null,
         this.state.products.map(function (prod) {
           return React.createElement(Product, { name: prod.name, key: prod._id });
         })
@@ -45,7 +47,7 @@ var ProductList = React.createClass({
         null,
         React.createElement(
           'button',
-          { onClick: this.handleClick, className: 'btn btn-primary btn-lg' },
+          { className: 'promo-confirm', onClick: this.handleClick },
           'Crear'
         )
       )
@@ -86,51 +88,35 @@ var Product = React.createClass({
   },
   render: function render() {
     return React.createElement(
-      'tr',
-      null,
+      'div',
+      { className: 'beer' },
       React.createElement(
-        'td',
+        'div',
         null,
+        React.createElement('input', { className: 'beer-status', onClick: this.handleCheck, type: 'checkbox', checked: this.state.checked }),
         React.createElement(
-          'div',
-          { className: 'col-md-4' },
-          React.createElement(
-            'div',
-            { className: 'checkbox' },
-            React.createElement(
-              'label',
-              null,
-              React.createElement('input', { onClick: this.handleCheck, type: 'checkbox', checked: this.state.checked })
-            )
-          )
+          'h4',
+          { className: 'beer-name' },
+          this.props.name
+        )
+      ),
+      React.createElement(
+        'div',
+        { className: 'descount' },
+        React.createElement(
+          'button',
+          { className: 'descount-button', onClick: this.decrement },
+          '-'
         ),
         React.createElement(
-          'div',
-          { className: 'col-md-4' },
-          React.createElement(
-            'h4',
-            null,
-            this.props.name
-          )
+          'p',
+          { className: 'descount-percentage' },
+          this.state.descount
         ),
         React.createElement(
-          'div',
-          { className: 'col-md-4' },
-          React.createElement(
-            'p',
-            null,
-            this.state.descount
-          ),
-          React.createElement(
-            'button',
-            { onClick: this.increment },
-            '+'
-          ),
-          React.createElement(
-            'button',
-            { onClick: this.decrement },
-            '-'
-          )
+          'button',
+          { className: 'descount-button', onClick: this.increment },
+          '+'
         )
       )
     );
@@ -191,9 +177,6 @@ var React = require('react');
 var Promo = React.createClass({
   displayName: 'Promo',
 
-  deleteElement: function deleteElement() {
-    this.setState({});
-  },
   render: function render() {
     return React.createElement(
       'tr',
@@ -241,8 +224,6 @@ var ProductList = require('./components/product-list');
 var PromoList = require('./components/promo-list');
 
 ReactDOM.render(React.createElement(ProductList, null), document.querySelector('#product-list'));
-
-ReactDOM.render(React.createElement(PromoList, null), document.querySelector('#promo-list'));
 
 },{"./components/product-list":1,"./components/promo-list":3,"react":221,"react-dom":92}],6:[function(require,module,exports){
 // http://wiki.commonjs.org/wiki/Unit_Testing/1.0

@@ -8,8 +8,8 @@
     <meta name="author" content="">
     <title>Starter Template for Bootstrap 3.3.6</title>
     <link rel="shortcut icon" href="">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+    <link rel="stylesheet" href="/css/dashboard.css">
 
     <!--[if IE]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -18,36 +18,11 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="panel panel-primary">
-            <div class="panel-heading">
-                <div class="container">
-                    <h1>Promociones</h1>
-                </div>
-            </div>
-            <div class="panel-body">
-                <div class="table-responsive" id="product-list">
-                <!-- react stuff -->
-                </div>
-                <div class="table-responsive" style="margin-top:3%;">
-                    <table class="table table-striped table-bordered table-hover", id="promo-list">
-                      <!-- react stuff -->
-                    </table>
-
-                </div>
-            </div>
-        </div>
-        <!--cierra el panel -->
-
+    <div class="promotions">
+      <h1 class="promotions-title">Crear una promoción</h1>
+      <div class="promotions-beers" id="product-list"></div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<<<<<<< HEAD
-</body>
 
-</html>
-=======
     <script src="/js/dashboard-bundle.js"></script>
 </body>
 </html>
->>>>>>> central/master

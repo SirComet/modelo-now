@@ -8,7 +8,9 @@ const Product = require('./product');
 
 const ProductList = React.createClass({
   handleClick: function () {
-    console.log(ReactDOM.findDOMNode(this));
+    let node = ReactDOM.findDOMNode(this);
+
+    console.log(node.innerHTML);
   },
   componentWillMount: function () {
     Fetch('http://localhost:3000/api/beers')
@@ -26,13 +28,13 @@ const ProductList = React.createClass({
   render: function () {
     return (
       <div>
-        <table className="table table-striped table-bordered table-hover">
+        <div>
           {this.state.products.map(prod => {
             return <Product name={prod.name} key={prod._id} />
           })}
-        </table>
+        </div>
         <div>
-          <button onClick={this.handleClick} className="btn btn-primary btn-lg">Crear</button>
+          <button className="promo-confirm" onClick={this.handleClick}>Crear</button>
         </div>
       </div>
     );

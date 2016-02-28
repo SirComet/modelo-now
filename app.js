@@ -40,7 +40,7 @@ app.use(Express.static(publicPath));
  */
 
 app.get('/', (req, res) => {
-  res.sendFile(publicPath + '/index.html');
+  res.sendFile(publicPath + '/test.html');
 });
 
 app.get('/admin', (req, res) => {

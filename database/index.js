@@ -2,6 +2,6 @@
 
 module.exports = {
   beer: require('./models/beer'),
-  promo: require('./models/promo')//,
-  //admin: require('./models/admin')
+  promo: require('./models/promo'),
+  pack: require('./models/pack')
 };

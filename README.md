@@ -7,4 +7,9 @@ $ npm install
 $ node app
 ```
 
-## Acerca de
+## API
+```
+GET /api/beers/
+GET /api/promos/
+GET /api/packs/
+```

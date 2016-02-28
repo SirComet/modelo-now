@@ -6,6 +6,7 @@ const Router = Express.Router();
 
 const BeerModel = require('../database/').beer;
 const PromoModel = require('../database/').promo;
+const PackModel = require('../database/').pack;
 const DBConfig = require('../database/config');
 
 Mongoose.connect(DBConfig.getString());
@@ -19,6 +20,12 @@ Router
   })
   .get('/promos', (req, res) => {
     PromoModel
+      .find({})
+      .then(docs => res.json(docs))
+      .catch(err => res.json(err));
+  })
+  .get('/packs', (req, res) => {
+    PackModel
       .find({})
       .then(docs => res.json(docs))
       .catch(err => res.json(err));

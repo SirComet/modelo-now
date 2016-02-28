@@ -1,6 +1,7 @@
 'use strict';
 
 const Express = require('express');
+<<<<<<< HEAD
 const Path = require('path');
 
 const app = Express();
@@ -34,3 +35,16 @@ app.listen(3000, '127.0.0.1', (err) => {
 });
 
 module.exports = app;
+=======
+
+const app = Express();
+
+app.set('etag', 'strong');
+
+app.get('/', (req, res) => {
+	res.send('Hello world.');
+});
+
+app.listen(3000, () => console.log('Server running on port 3000.'));
+
+>>>>>>> b276a9b892dcb4f23072c142c8d6abef336c122d

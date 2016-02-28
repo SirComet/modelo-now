@@ -51,6 +51,14 @@ app.get('/admin/dashboard', (req, res) => {
   res.sendFile(publicPath + '/dashboard.html');
 });
 
+app.get('/caja', (req, res) => {
+  res.sendFile(publicPath + '/caja.html')
+});
+
+app.get('/design-package', (req, res) => {
+  res.sendFile(publicPath + '/design-package.html');
+});
+
 app.use('/api/', Api);
 
 /*!

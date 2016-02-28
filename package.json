@@ -4,20 +4,29 @@
   "description": "Chelathon Project - Model Now",
   "main": "index.js",
   "scripts": {
+    "babelify": "browserify app/src/app.js -o app/public/js/bundle.js -t [babelify]",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
   "dependencies": {
-    "express": "4.13.4"
+    "express": "4.13.4",
+    "node-fetch": "1.3.3",
+    "react": "0.14.7",
+    "react-dom": "0.14.7",
+    "react-redux": "4.4.0",
+    "redux": "3.3.1"
   },
   "devDependencies": {
+    "babel-core": "6.5.2",
+    "babel-preset-es2015": "6.5.0",
+    "babel-preset-react": "6.5.0",
+    "babelify": "7.2.0",
+    "browserify": "13.0.0",
     "chai": "3.5.0",
-    "grunt": "0.4.5",
-    "grunt-contrib-jade": "0.15.0",
     "mocha": "2.4.5",
-    "qunitjs": "1.22.0"
+    "redux-devtools": "3.1.1",
+    "supertest": "1.2.0"
   },
   "directories": {
     "doc": "docs",

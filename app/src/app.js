@@ -13,9 +13,6 @@ Fetch('http://localhost:3000/api/beers/').
     let beers = JSON.parse(data);
     ReactDOM.render(
       <BeerList beers={beers} />,
-      document.querySelector('#app')
+      document.querySelector('#beer-list')
     );
-  }).
-  catch(err => {
-    document.write(err);
-  });
+  })

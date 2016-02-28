@@ -14,5 +14,4 @@ Fetch('http://localhost:3000/api/beers/').
       <BeerList beers={data} />,
       document.querySelector('#beer-list')
     );
-    -->
   })

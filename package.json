@@ -4,7 +4,8 @@
   "description": "Chelathon Project - Model Now",
   "main": "index.js",
   "scripts": {
-    "babelify": "browserify app/src/main.js -o app/public/js/main-bundle.js -t [babelify]",
+    "babelify:dashboard": "browserify app/src/dashboard.js -o app/public/js/dashboard-bundle.js -t [babelify]",
+    "babelify:main": "browserify app/src/main.js -o app/public/js/main-bundle.js -t [babelify]",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

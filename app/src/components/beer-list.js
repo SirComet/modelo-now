@@ -11,7 +11,6 @@ const BeerList = React.createClass({
         return res.json();
       })
       .then(data => {
-        console.log(data);
         let beers = data;
         this.setState({
           beers
